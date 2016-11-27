@@ -38,7 +38,7 @@ const pingmap = function() {
                       <div class="col-sm-9 col-xs-9">
                         <span class="name">Sweater</span>
                         <span class="profile-item-desc">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                          Autumn Cashmere ribbed cashmere-blend sweater.
                         </span>
                       </div>
                     </div>
@@ -58,7 +58,7 @@ const pingmap = function() {
                     </div>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">l</span>
-                      <span class="sizes sizes-xs sizes-label">0</span>
+                      <span class="sizes sizes-xs sizes-label">8</span>
                     </div>
                   </div>
 
@@ -73,7 +73,7 @@ const pingmap = function() {
                       <div class="col-sm-9 col-xs-9">
                         <span class="name">Hoodie</span>
                         <span class="profile-item-desc">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                          Grizzly Long Range pullover fleece hoodie. Colorblock construction.
                         </span>
                       </div>
                     </div>
@@ -86,15 +86,15 @@ const pingmap = function() {
                     <span class="profile-item-price">Available sizes</span>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">s</span>
-                      <span class="sizes sizes-xs sizes-label">20</span>
+                      <span class="sizes sizes-xs sizes-label">14</span>
                     </div>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">m</span>
-                      <span class="sizes sizes-xs sizes-label">10</span>
+                      <span class="sizes sizes-xs sizes-label">9</span>
                     </div>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">l</span>
-                      <span class="sizes sizes-xs sizes-label">0</span>
+                      <span class="sizes sizes-xs sizes-label">17</span>
                     </div>
                   </div>
 
@@ -110,7 +110,7 @@ const pingmap = function() {
                       <div class="col-sm-9 col-xs-9">
                         <span class="name">Shirt</span>
                         <span class="profile-item-desc">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                          T-shirt with R2D2 print made from 100% organic cotton.
                         </span>
                       </div>
                     </div>
@@ -122,15 +122,15 @@ const pingmap = function() {
                     <span class="profile-item-price">Available sizes</span>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">s</span>
-                      <span class="sizes sizes-xs sizes-label">20</span>
+                      <span class="sizes sizes-xs sizes-label">12</span>
                     </div>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">m</span>
-                      <span class="sizes sizes-xs sizes-label">10</span>
+                      <span class="sizes sizes-xs sizes-label">17</span>
                     </div>
                     <div class="profile-item-sizes">
                       <span class="sizes sizes-xs sizes-label">l</span>
-                      <span class="sizes sizes-xs sizes-label">0</span>
+                      <span class="sizes sizes-xs sizes-label">5</span>
                     </div>
                   </div>
 

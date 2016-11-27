@@ -18,11 +18,13 @@ const routes = [
   { path: '/dashboard', component: dashboard },
   { path: '/heatmap', component: heatmap },
   { path: '/pingmap', component: pingmap },
-  { path: '/profile', component: profile }
+  { path: '/profile', component: profile },
+  {path: '', redirect: '/dashboard'}
 ];
 const router = new VueRouter({
   routes //
 });
+
 
 const instance = new Vue({
   router,

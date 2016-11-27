@@ -13,13 +13,14 @@ const dashboard = function() {
       <div class="app-header dashboard">
         <div class="container">
           <div class="app-heading">
-            <h1 class="app-heading-heading">Dashboard</h1>
+            <h1 class="app-heading-heading text-center">Keep in touch. Visualize. Drive your sales.</h1>
             <p class="app-description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
             </p>
           </div>
         </div>
       </div>
+
 
       <div class="dashboard-body">
         <div class="container">
@@ -51,7 +52,7 @@ const dashboard = function() {
           {
             name:"Heatmap",
             subtitle:"test",
-            desc:"Lorem impsum",
+            desc:"Find out the hottest place in your store",
             link:'/heatmap',
             bg:'/images/heatmap.png'
           },

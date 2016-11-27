@@ -23,7 +23,7 @@ const pingmap = function() {
         <div class="app-heading">
           <h1 class="app-heading-heading">Customer map</h1>
           <p class="app-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            CashMesh is a Bluetooth sensor network, combined with store lighting system. It allows tracking user movements inside shop facility and provides them with a small handy hintME! button to call consultants when customer really needs them. 
           </p>
         </div>
       </div>

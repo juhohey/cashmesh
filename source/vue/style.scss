@@ -2,6 +2,9 @@ body{
   background:  #f3f3f3;
   font-family: roboto;
 }
+[v-cloak]{
+  display: none;
+}
 .view{
   &-contain{
     padding-top: 50px;
@@ -94,7 +97,15 @@ a{
   background-size: cover;
 }
 
-
+.card{
+  cursor: inherit!important;
+}
+.card-action{
+  cursor: pointer;
+}
+.text-center{
+  text-align: center;
+}
 
 
 @media (max-width:767px) {

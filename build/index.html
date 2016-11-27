@@ -12,16 +12,15 @@
     <script src="/js/d3.js" charset="utf-8"></script>
     <script src="/js/d3.floorplan.js" charset="utf-8"></script>
     <script src="/js/hm.js"></script>
-    <script src="/js/vdad.js" charset="utf-8"></script>
   </head>
   <body>
 
-    <div class="app" id="app">
+    <div class="app" id="app" v-cloak>
       <header class="header">
        <nav class="navbar navbar-fixed-top">
           <div class="container">
              <div class="navbar-header">
-                <a class="navbar-brand has-logo">
+                <a class="navbar-brand has-logo" href="#/dashboard">
                   <img class="nav-logo" src="/images/logo-120.png" alt="">
                 </a>
                 <button id="toggle-collapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -66,7 +65,6 @@
     </div>
     <script defer src="js/bundle.js" charset="utf-8"></script>
     <!-- livereload, remove on production -->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js"></' + 'script>')</script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </body>
 </html>

@@ -59,10 +59,10 @@ const ping = function() {
          }];
 
     map.addLayer(imagelayer)
-       .addLayer(heatmap)
-       .addLayer(vectorfield)
-       .addLayer(pathplot)
-       .addLayer(overlays);
+       //.addLayer(heatmap)
+       //.addLayer(vectorfield)
+       //.addLayer(pathplot)
+      // .addLayer(overlays);
 
   function _init() {
 
@@ -80,7 +80,7 @@ const ping = function() {
     //	mapdata[vectorfield.id()] = data.vectorfield;
   	//mapdata[pathplot.id()] = data.pathplot;
     make();
-    addListener();
+    //addListener();
     _init();
 
   };
@@ -91,7 +91,7 @@ const ping = function() {
 
     //Remove
     if(_points.length >= MAX_POINTS) removePrevious();
-    if(_text.length >= USER_AMOUNT * 2) removePreviousText();
+    if(_text.length >= USER_AMOUNT * 8) removePreviousText();
 
     if(_shouldShowTip) ping.showTip();
   };

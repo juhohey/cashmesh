@@ -233,6 +233,9 @@ var id = (function () {
 
 	var scale$1 = scale();
 
+	/**
+	* Module
+	*/
 	var heatInstance = function heatInstance() {
 	  'use strict';
 
@@ -253,7 +256,7 @@ var id = (function () {
 	      backgroundColor: 'rgba(0, 0, 58, 0)'
 	    });
 
-	    addEvents(_element);
+	    //  addEvents(_element);
 	    addInitial();
 	    //addTestCases();
 	    return instance;
@@ -320,7 +323,7 @@ var id = (function () {
 	  var API_ADDR = "http://40.113.85.15/cashmesh?get_heatmap";
 	  var _lastData = void 0;
 	  var heatmap = Vue.extend({
-	    template: '<div class="heatmap-container">\n      <div class="app-header">\n        <div class="container">\n          <div class="app-heading">\n            <h1 class="app-heading-heading">Heatmap</h1>\n            <p class="app-description">\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class="heatmap" id="heatmap">\n    </div>',
+	    template: '<div class="heatmap-container">\n      <div class="app-header">\n        <div class="container">\n          <div class="app-heading">\n            <h1 class="app-heading-heading">Heatmap</h1>\n            <p class="app-description">\n             Based on customers\u2019 movement throughout time, CashMesh utilizes Microsoft Azure to make a \u201Cheatmap\u201D of store facility area to identify and optimize production placement for even better conversion.\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class="heatmap" id="heatmap">\n    </div>',
 	    data: function data() {
 	      return {};
 	    },
@@ -405,7 +408,11 @@ var id = (function () {
 	    width: __w
 	  }];
 
-	  map.addLayer(imagelayer).addLayer(heatmap).addLayer(vectorfield).addLayer(pathplot).addLayer(overlays);
+	  map.addLayer(imagelayer);
+	  //.addLayer(heatmap)
+	  //.addLayer(vectorfield)
+	  //.addLayer(pathplot)
+	  // .addLayer(overlays);
 
 	  function _init() {
 
@@ -423,7 +430,7 @@ var id = (function () {
 	    //	mapdata[vectorfield.id()] = data.vectorfield;
 	    //mapdata[pathplot.id()] = data.pathplot;
 	    make();
-	    addListener();
+	    //addListener();
 	    _init();
 	  };
 	  ping.addData = function (data) {
@@ -433,7 +440,7 @@ var id = (function () {
 
 	    //Remove
 	    if (_points.length >= MAX_POINTS) removePrevious();
-	    if (_text.length >= USER_AMOUNT * 2) removePreviousText();
+	    if (_text.length >= USER_AMOUNT * 8) removePreviousText();
 
 	    if (_shouldShowTip) ping.showTip();
 	  };
@@ -766,9 +773,6 @@ var id = (function () {
 
 	var toast = toaster();
 
-	/**
-	* Module
-	*/
 	var pingmap = function pingmap() {
 	  'use strict';
 
@@ -778,7 +782,7 @@ var id = (function () {
 	  var _intervals = {};
 	  var _isToast = false;
 	  var pingmap = Vue.extend({
-	    template: '<div class="view">\n    <div class="app-header">\n      <div class="container">\n        <div class="app-heading">\n          <h1 class="app-heading-heading">Customer map</h1>\n          <p class="app-description">\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n          </p>\n        </div>\n      </div>\n    </div>\n      <div id="ping"></div>\n    </div>',
+	    template: '<div class="view">\n    <div class="app-header">\n      <div class="container">\n        <div class="app-heading">\n          <h1 class="app-heading-heading">Customer map</h1>\n          <p class="app-description">\n            CashMesh is a Bluetooth sensor network, combined with store lighting system. It allows tracking user movements inside shop facility and provides them with a small handy hintME! button to call consultants when customer really needs them. \n          </p>\n        </div>\n      </div>\n    </div>\n      <div id="ping"></div>\n    </div>',
 	    data: function data() {
 	      return {};
 	    },
@@ -874,7 +878,7 @@ var id = (function () {
 	  var _intervals = {};
 	  var _isToast = false;
 	  var pingmap = Vue.extend({
-	    template: '<div class="view">\n      <div class="profile">\n\n        <div class="profile-header" v-bind:style="{\'background-image\': getBg()}">\n          <div class="container">\n            <h1 class="profile-heading">Outwear</h1>\n          </div>\n        </div>\n\n        <div class="container">\n          <div class="profile-body">\n            <h3 class="profile-body-heading">Top items</h3>\n            <div class="profile-list">\n\n              <ul class="profile-item-list">\n\n                <li class="profile-item">\n                  <div class="profile-item-col">\n                    <div class="row">\n                      <div class="col-sm-3 col-xs-3">\n                        <span class="profile-avatar"><img class="profile-image" src="/images/sweater.png"></span>\n\n                      </div>\n                      <div class="col-sm-9 col-xs-9">\n                        <span class="name">Sweater</span>\n                        <span class="profile-item-desc">\n                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,\n                        </span>\n                      </div>\n                    </div>\n                  </div>\n                  <div class="profile-item-col-2">\n                    <span class="profile-item-price">200\u20AC</span>\n                  </div>\n                  <div class="profile-item-col-3">\n                    <span class="profile-item-price">Available sizes</span>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">s</span>\n                      <span class="sizes sizes-xs sizes-label">20</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">m</span>\n                      <span class="sizes sizes-xs sizes-label">10</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">l</span>\n                      <span class="sizes sizes-xs sizes-label">0</span>\n                    </div>\n                  </div>\n\n                </li>\n                <li class="profile-item">\n                  <div class="profile-item-col">\n                    <div class="row">\n                      <div class="col-sm-3 col-xs-3">\n                        <span class="profile-avatar"><img class="profile-image" src="/images/hoodie.png"></span>\n\n                      </div>\n                      <div class="col-sm-9 col-xs-9">\n                        <span class="name">Hoodie</span>\n                        <span class="profile-item-desc">\n                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,\n                        </span>\n                      </div>\n                    </div>\n                  </div>\n                  <div class="profile-item-col-2">\n                    <span class="profile-item-price-discounted">80\u20AC</span>\n                    <span class="profile-item-price-discount">50\u20AC</span>\n                  </div>\n                  <div class="profile-item-col-3">\n                    <span class="profile-item-price">Available sizes</span>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">s</span>\n                      <span class="sizes sizes-xs sizes-label">20</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">m</span>\n                      <span class="sizes sizes-xs sizes-label">10</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">l</span>\n                      <span class="sizes sizes-xs sizes-label">0</span>\n                    </div>\n                  </div>\n\n\n                </li>\n                <li class="profile-item">\n                  <div class="profile-item-col">\n                    <div class="row">\n                      <div class="col-sm-3 col-xs-3">\n                        <span class="profile-avatar"><img class="profile-image" src="/images/shirt.png"></span>\n\n                      </div>\n                      <div class="col-sm-9 col-xs-9">\n                        <span class="name">Shirt</span>\n                        <span class="profile-item-desc">\n                          Lorem ipsum dolor sit amet, consectetur adipisicing elit,\n                        </span>\n                      </div>\n                    </div>\n                  </div>\n                  <div class="profile-item-col-2">\n                    <span class="profile-item-price">20\u20AC</span>\n                  </div>\n                  <div class="profile-item-col-3">\n                    <span class="profile-item-price">Available sizes</span>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">s</span>\n                      <span class="sizes sizes-xs sizes-label">20</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">m</span>\n                      <span class="sizes sizes-xs sizes-label">10</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">l</span>\n                      <span class="sizes sizes-xs sizes-label">0</span>\n                    </div>\n                  </div>\n\n\n                </li>\n              </ul>\n\n\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>',
+	    template: '<div class="view">\n      <div class="profile">\n\n        <div class="profile-header" v-bind:style="{\'background-image\': getBg()}">\n          <div class="container">\n            <h1 class="profile-heading">Outwear</h1>\n          </div>\n        </div>\n\n        <div class="container">\n          <div class="profile-body">\n            <h3 class="profile-body-heading">Top items</h3>\n            <div class="profile-list">\n\n              <ul class="profile-item-list">\n\n                <li class="profile-item">\n                  <div class="profile-item-col">\n                    <div class="row">\n                      <div class="col-sm-3 col-xs-3">\n                        <span class="profile-avatar"><img class="profile-image" src="/images/sweater.png"></span>\n\n                      </div>\n                      <div class="col-sm-9 col-xs-9">\n                        <span class="name">Sweater</span>\n                        <span class="profile-item-desc">\n                          Autumn Cashmere ribbed cashmere-blend sweater.\n                        </span>\n                      </div>\n                    </div>\n                  </div>\n                  <div class="profile-item-col-2">\n                    <span class="profile-item-price">200\u20AC</span>\n                  </div>\n                  <div class="profile-item-col-3">\n                    <span class="profile-item-price">Available sizes</span>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">s</span>\n                      <span class="sizes sizes-xs sizes-label">20</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">m</span>\n                      <span class="sizes sizes-xs sizes-label">10</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">l</span>\n                      <span class="sizes sizes-xs sizes-label">8</span>\n                    </div>\n                  </div>\n\n                </li>\n                <li class="profile-item">\n                  <div class="profile-item-col">\n                    <div class="row">\n                      <div class="col-sm-3 col-xs-3">\n                        <span class="profile-avatar"><img class="profile-image" src="/images/hoodie.png"></span>\n\n                      </div>\n                      <div class="col-sm-9 col-xs-9">\n                        <span class="name">Hoodie</span>\n                        <span class="profile-item-desc">\n                          Grizzly Long Range pullover fleece hoodie. Colorblock construction.\n                        </span>\n                      </div>\n                    </div>\n                  </div>\n                  <div class="profile-item-col-2">\n                    <span class="profile-item-price-discounted">80\u20AC</span>\n                    <span class="profile-item-price-discount">50\u20AC</span>\n                  </div>\n                  <div class="profile-item-col-3">\n                    <span class="profile-item-price">Available sizes</span>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">s</span>\n                      <span class="sizes sizes-xs sizes-label">14</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">m</span>\n                      <span class="sizes sizes-xs sizes-label">9</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">l</span>\n                      <span class="sizes sizes-xs sizes-label">17</span>\n                    </div>\n                  </div>\n\n\n                </li>\n                <li class="profile-item">\n                  <div class="profile-item-col">\n                    <div class="row">\n                      <div class="col-sm-3 col-xs-3">\n                        <span class="profile-avatar"><img class="profile-image" src="/images/shirt.png"></span>\n\n                      </div>\n                      <div class="col-sm-9 col-xs-9">\n                        <span class="name">Shirt</span>\n                        <span class="profile-item-desc">\n                          T-shirt with R2D2 print made from 100% organic cotton.\n                        </span>\n                      </div>\n                    </div>\n                  </div>\n                  <div class="profile-item-col-2">\n                    <span class="profile-item-price">20\u20AC</span>\n                  </div>\n                  <div class="profile-item-col-3">\n                    <span class="profile-item-price">Available sizes</span>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">s</span>\n                      <span class="sizes sizes-xs sizes-label">12</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">m</span>\n                      <span class="sizes sizes-xs sizes-label">17</span>\n                    </div>\n                    <div class="profile-item-sizes">\n                      <span class="sizes sizes-xs sizes-label">l</span>\n                      <span class="sizes sizes-xs sizes-label">5</span>\n                    </div>\n                  </div>\n\n\n                </li>\n              </ul>\n\n\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>',
 	    data: function data() {
 	      return {};
 	    },
@@ -898,13 +902,13 @@ var id = (function () {
 	  'use strict';
 
 	  var dashboard = Vue.extend({
-	    template: '\n      <div class="view">\n\n      <div class="app-header dashboard">\n        <div class="container">\n          <div class="app-heading">\n            <h1 class="app-heading-heading">Dashboard</h1>\n            <p class="app-description">\n              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n            </p>\n          </div>\n        </div>\n      </div>\n\n      <div class="dashboard-body">\n        <div class="container">\n        <div class="row">\n          <div class="dashboard-col" v-for="section in sections">\n          <div class="card card--big dashboard-card a">\n            <div v-bind:style="{\'background-image\': getBg(section.bg)}"class="card__image card__image__bg"></div>\n            <h2 class="card__title">{{section.name}}</h2>\n            <span class="card__subtitle">{{section.subtitle}}</span>\n            <p class="card__text">{{section.desc}}<br>\n            </p>\n\n            <div class="card__action-bar dashboard-card-action a">\n                <span class="card-action" v-on:click="goto(section.link)">View</span>\n            </div>\n          </div>\n          </div>\n\n        </div>\n        </div>\n\n      </div>\n\n      </div>\n    ',
+	    template: '\n      <div class="view">\n\n      <div class="app-header dashboard">\n        <div class="container">\n          <div class="app-heading">\n            <h1 class="app-heading-heading text-center">Keep in touch. Visualize. Drive your sales.</h1>\n            <p class="app-description">\n\n            </p>\n          </div>\n        </div>\n      </div>\n\n\n      <div class="dashboard-body">\n        <div class="container">\n        <div class="row">\n          <div class="dashboard-col" v-for="section in sections">\n          <div class="card card--big dashboard-card a">\n            <div v-bind:style="{\'background-image\': getBg(section.bg)}"class="card__image card__image__bg"></div>\n            <h2 class="card__title">{{section.name}}</h2>\n            <span class="card__subtitle">{{section.subtitle}}</span>\n            <p class="card__text">{{section.desc}}<br>\n            </p>\n\n            <div class="card__action-bar dashboard-card-action a">\n                <span class="card-action" v-on:click="goto(section.link)">View</span>\n            </div>\n          </div>\n          </div>\n\n        </div>\n        </div>\n\n      </div>\n\n      </div>\n    ',
 	    data: function data() {
 	      return {
 	        sections: [{
 	          name: "Heatmap",
 	          subtitle: "test",
-	          desc: "Lorem impsum",
+	          desc: "Find out the hottest place in your store",
 	          link: '/heatmap',
 	          bg: '/images/heatmap.png'
 	        }, {
@@ -1245,7 +1249,7 @@ var id = (function () {
 
 	interopDefault(vue_dragAndDrop);
 
-	var routes = [{ path: '/dashboard', component: dashboard$1 }, { path: '/heatmap', component: heatmap$1 }, { path: '/pingmap', component: pingmap$1 }, { path: '/profile', component: profile }];
+	var routes = [{ path: '/dashboard', component: dashboard$1 }, { path: '/heatmap', component: heatmap$1 }, { path: '/pingmap', component: pingmap$1 }, { path: '/profile', component: profile }, { path: '', redirect: '/dashboard' }];
 	var router = new VueRouter({
 	  routes: routes //
 	});

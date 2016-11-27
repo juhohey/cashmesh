@@ -23,7 +23,7 @@ const heatInstance = function() {
       backgroundColor: 'rgba(0, 0, 58, 0)'
     });
 
-    addEvents(_element);
+  //  addEvents(_element);
     addInitial();
     //addTestCases();
     return instance;

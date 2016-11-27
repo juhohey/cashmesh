@@ -39,7 +39,6 @@
     "vue-drag-and-drop": "^2.2.0"
   },
   "dependencies": {
-    "preact": "^2.8.3",
-    "svg-pan-zoom": "github:ariutta/svg-pan-zoom"
+
   }
 }

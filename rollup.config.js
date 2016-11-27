@@ -22,5 +22,5 @@ export default {
   ],
   format: 'iife',
   useStrict:false,
-  moduleName:'id'
+  moduleName:'cashmesh'
 };

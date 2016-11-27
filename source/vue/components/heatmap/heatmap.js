@@ -19,7 +19,7 @@ const heatmap = function() {
           <div class="app-heading">
             <h1 class="app-heading-heading">Heatmap</h1>
             <p class="app-description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             Based on customers’ movement throughout time, CashMesh utilizes Microsoft Azure to make a “heatmap” of store facility area to identify and optimize production placement for even better conversion.
             </p>
           </div>
         </div>
